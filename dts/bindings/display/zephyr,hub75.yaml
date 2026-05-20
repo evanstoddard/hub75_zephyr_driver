@@ -32,13 +32,10 @@ properties:
     type: int
     required: true
     description: |
-      Display width in pixels. Must be a multiple of 32 for horizontal chaining.
+      Display width in pixels. 
 
   height:
     type: int
     required: true
-    enum:
-      - 16
     description: |
-      Display height in pixels. Must match the physical hardware panel.
-      Standard HUB12 P10 panels are 16 pixels tall.
+      Display height in pixels. 
