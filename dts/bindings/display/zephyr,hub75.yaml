@@ -1,0 +1,44 @@
+# Copyright 2026, Evan Stoddard
+# SPDX-License-Identifier: Apache-2.0
+
+description: HUB75 RGB LED Panel Display Controller
+
+compatible: "zephyr,hub75"
+
+include: display-controller.yaml
+
+properties:
+#  pa-gpios:
+#    type: phandle-array
+#    required: true
+#    description: Row address bit 0
+
+#  pb-gpios:
+#    type: phandle-array
+#    required: true
+#    description: Row address bit 1
+
+#  pe-gpios:
+#    type: phandle-array
+#    required: true
+#    description: Output enable control
+#
+#  plat-gpios:
+#    type: phandle-array
+#    required: true
+#    description: Shift register latch
+
+  width:
+    type: int
+    required: true
+    description: |
+      Display width in pixels. Must be a multiple of 32 for horizontal chaining.
+
+  height:
+    type: int
+    required: true
+    enum:
+      - 16
+    description: |
+      Display height in pixels. Must match the physical hardware panel.
+      Standard HUB12 P10 panels are 16 pixels tall.
