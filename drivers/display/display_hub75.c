@@ -327,7 +327,7 @@ static int hub75_init(const struct device *dev) {
  */
 static int hub75_blanking_on(const struct device *dev) {
   struct hub75_data_t *data = dev->data;
-  data->blanking = false;
+  data->blanking = true;
 
   return 0;
 }
