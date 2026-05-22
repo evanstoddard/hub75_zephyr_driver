@@ -8,34 +8,90 @@ compatible: "zephyr,hub75"
 include: display-controller.yaml
 
 properties:
-#  pa-gpios:
-#    type: phandle-array
-#    required: true
-#    description: Row address bit 0
 
-#  pb-gpios:
-#    type: phandle-array
-#    required: true
-#    description: Row address bit 1
+  pin-r1-gpios:
+    type: phandle-array
+    required: true
+    description: Red bit for top half 
+  
+  pin-r2-gpios:
+    type: phandle-array
+    required: true
+    description: Red bit for lower half 
 
-#  pe-gpios:
-#    type: phandle-array
-#    required: true
-#    description: Output enable control
-#
-#  plat-gpios:
-#    type: phandle-array
-#    required: true
-#    description: Shift register latch
+  pin-g1-gpios:
+    type: phandle-array
+    required: true
+    description: Green bit for top half 
+
+  pin-g2-gpios:
+    type: phandle-array
+    required: true
+    description: Green bit for lower half 
+
+  pin-b1-gpios:
+    type: phandle-array
+    required: true
+    description: Blue bit for top half 
+
+  pin-b2-gpios:
+    type: phandle-array
+    required: true
+    description: Blue bit for lower half 
+
+  pin-a-gpios:
+    type: phandle-array
+    required: true
+    description: Row address bit 0
+
+  pin-b-gpios:
+    type: phandle-array
+    required: true
+    description: Row address bit 1
+
+  pin-c-gpios:
+    type: phandle-array
+    required: true
+    description: Row address bit 2
+  
+  pin-d-gpios:
+    type: phandle-array
+    required: true
+    description: Row address bit 3
+
+  pin-e-gpios:
+    type: phandle-array
+    required: true
+    description: Row address bit 4
+
+  pin-clk-gpios:
+    type: phandle-array
+    required: true
+    description: Clock line 
+
+  pin-latch-gpios:
+    type: phandle-array
+    required: true
+    description: Latch line 
+
+  pin-n-en-gpios:
+    type: phandle-array
+    required: true
+    description: Output enable line 
+
+  counter:
+    type: phandle
+    required: true
+    description: Hardware counter used to drive the refresh ISR.
 
   width:
     type: int
     required: true
     description: |
-      Display width in pixels. 
+      Display width in pixels.
 
   height:
     type: int
     required: true
     description: |
-      Display height in pixels. 
+      Display height in pixels.
