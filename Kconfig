@@ -3,7 +3,9 @@ menu "HUB75 RGB Panel"
 config HUB75
     bool "HUB75 LED Panel Display Controller"
     depends on DT_HAS_ZEPHYR_HUB75_ENABLED
+    select DISPLAY
     select GPIO
+    select COUNTER
     help
       HUB75 LED panel controller.
 
